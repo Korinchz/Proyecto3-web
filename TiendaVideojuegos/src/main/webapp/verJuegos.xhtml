@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body> 
+      <ui:composition template="./Plantilla/Plantillaresumen.xhtml">
+            <ui:define name="content">
+                <div class="card">     
+                    <p:dataTable id="juegos" var="juegos" value="#{verJuegos.listaJuegos}">
+                        <f:facet name="header">
+                            <div class="p-d-flex p-jc-between p-ai-center">
+                             LISTA DE VIDEO JUEGOS 
+                                <div>
+                                    <p:commandButton id="toggler" type="button" value="Columns" icon="pi pi-align-justify"/>
+                                    <p:columnToggler datasource="juegos" trigger="toggler"/>
+                                </div>
+                            </div>
+                        </f:facet>
+                        <p:column headerText="nombre">
+                            <h:outputText value="#{juegos.nombre}" />
+                        </p:column>
+                        <p:column headerText="desarrollador">
+                            <h:outputText value="#{juegos.desarrollador}" />
+                        </p:column>
+                        <p:column headerText="genero">
+                            <h:outputText value="#{juegos.genero}" />
+                        </p:column>
+                        <p:column headerText="precio">
+                            <h:outputText value="#{juegos.precio}">
+                                <f:convertNumber type="currency" currencySymbol="$"/>
+                            </h:outputText>
+                        </p:column>
+                        <p:column headerText="modoJuego">
+                            <h:outputText value="#{juegos.modoJuego}" />
+                            <p:column headerText="fechaLazamiento">
+                                <h:outputText value="#{juegos.fechaLazamiento}" />
+                                <p:column headerText="plataforma">
+                                    <h:outputText value="#{juegos.plataforma}" />
+                                    <p:column headerText="idiomas">
+                                        <h:outputText value="#{juegos.idiomas}" />
+                                    </p:column>
+                                </p:column>
+                            </p:column>
+                        </p:column>           
+                    </p:dataTable>
+                    <p:commandButton value="Print" type="button" icon="pi pi-print" styleClass="p-d-block p-shadow-2 p-mb-3">
+                        <p:printer target="image"/>
+                    </p:commandButton>
+                    <p:graphicImage id="image" value="./faces/verJuegos.xhtml"/>
+                </div>      
+           </ui:define>
+           <ui:define name="bottom">
+                <marquee >
+                    <img src="https://as01.epimg.net/meristation/imagenes/2021/02/21/reportajes/1613888485_682494_1613888565_noticia_normal.jpg" width="200" height="200" />
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/09/mejores-juegos-super-mario.jpg?itok=Y16dIZA5" width="200" height="200" />
+                    <img src="https://eep-madrid.es/blog/wp-content/uploads/2019/12/fortnite-para-android.jpg" width="200" height="200" />
+                    <img src="https://areajugones.sport.es/wp-content/uploads/2020/11/halo-master-chief-1080x609.jpg" width="200" height="200" />
+                    <img src="https://culturageek.com.ar/wp-content/uploads/2021/08/1589953288_448757_1589953463_noticia_normal_recorte1.jpg" width="200" height="200" />
+                    <img src="https://depor.com/resizer/pTX9pnI2GOu2cmYQGIpD_LbFeAY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KGPLE3GVHNBEXLLH5OY6JOF454.jpg" width="200" height="200" />
+                </marquee>
+           </ui:define> 
+        </ui:composition>
+    </body>
+</html>

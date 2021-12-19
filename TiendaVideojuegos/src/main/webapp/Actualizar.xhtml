@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <style type="text/css">
+    
+    
+        </style>
+        
+    </head>
+    <body>
+
+        <ui:composition template="./Plantilla/newTemplate.xhtml">
+            <ui:define name="content">
+                <h:form>
+                   <div class="container mt-3">
+                    <div class="row">
+                                        <div class="col-sm-3">
+                                           <h6>Nombre</h6>
+                                              <p:inputText value="#{actualizar.nombreActualiza}"/>
+                                        </div>
+                                       
+                                        <div class="col-sm-3">
+                                           <h6>Desarrollado</h6>
+                                         <p:inputText value="#{actualizar.desarrolladorActualiza}"/>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                        <h6>Genero</h6>
+                                        <p:inputText value="#{actualizar.generoActualiza}"/>
+                                         </div>
+            
+                                        <div class="col-sm-3">
+                                            <h6>precio</h6>
+                                             <p:inputText value="#{actualizar.precioActualiza}"/>
+                                        </div>
+             
+                                        <div class="col-sm-3">
+                                            <h6>ModoJuego</h6>
+                                             <p:inputText value="#{actualizar.modoActualiza}"/>
+                                        </div>
+            
+                                        <div class="col-sm-3">
+                                       <h6>fechaLanzamiento</h6>
+                                       <p:inputText value="#{actualizar.fechaLanzamientoActualiza}"/>
+                                        </div>
+      
+                                        <div class="col-sm-3">
+                                        <h6>plataforma</h6>
+                                        <p:inputText value="#{actualizar.plataformaActualiza}"/>
+                                        </div> 
+    
+                                        <div class="col-sm-3">
+                                       <h6>idioma</h6>
+                                       <p:inputText value="#{actualizar.idiomaActualiza}"/>
+                                        </div>
+  
+                                         <div class="col-sm-3">
+                                        <h6>IDjuego</h6>
+                                        <p:inputText value="#{actualizar.buscaID}"/>
+                                         </div>
+                        </div>
+                       </div>
+       
+                                     <div class="card">
+                                        <div class="p-grid">
+                                            <div class="p-col-12 p-md-4">
+                                                <p:staticMessage severity="WARN" summary="Advertencia" detail="Actualiza todos tus datos" style="width: 100%" />
+                                            </div>  
+                                        </div>
+                                    </div>
+                                       
+                                <br>
+                                 <p:commandButton value="Actualizar" styleClass="rounded-button ui-button-danger" action="#{actualizar.actualizar()}"/>
+                                </br>
+                </h:form>          
+      
+  
+            </ui:define>
+            
+<ui:define name="bottom">
+                     <marquee >
+                        <img src="https://as01.epimg.net/meristation/imagenes/2021/02/21/reportajes/1613888485_682494_1613888565_noticia_normal.jpg" width="200" height="200" />
+                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/09/mejores-juegos-super-mario.jpg?itok=Y16dIZA5" width="200" height="200" />
+                        <img src="https://eep-madrid.es/blog/wp-content/uploads/2019/12/fortnite-para-android.jpg" width="200" height="200" />
+                        <img src="https://areajugones.sport.es/wp-content/uploads/2020/11/halo-master-chief-1080x609.jpg" width="200" height="200" />
+                        <img src="https://culturageek.com.ar/wp-content/uploads/2021/08/1589953288_448757_1589953463_noticia_normal_recorte1.jpg" width="200" height="200" />
+                        <img src="https://depor.com/resizer/pTX9pnI2GOu2cmYQGIpD_LbFeAY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KGPLE3GVHNBEXLLH5OY6JOF454.jpg" width="200" height="200" />
+                      </marquee>
+</ui:define>
+            
+        </ui:composition>
+    </body>
+</html>

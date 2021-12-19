@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <style type="text/css">
+        </style>
+    </head>
+    
+    <body>
+ <ui:composition template="./Plantilla/newTemplate.xhtml">
+        <ui:define name="content">
+            <h:form>
+                <div class="container mt-2">
+                    <div class="row">
+                       <div class="col-sm-3">
+                           <h6>PRODUCTO</h6> 
+                                       <p:outputLabel for="nombreJuego" />
+                        <p:inputText id="nombreJuego" value="#{ingresarjuegos.nombreJuego}" required="true"
+                                     requiredMessage="nombre Juego requerido">
+                                     <f:validateLength minimum="2"/>
+                                     <p:ajax update="msgnombreJuego"  event="keyup"/>
+                        </p:inputText>
+                                     <p:message for="nombreJuego" id="msgnombreJuego" display="icon"/>    
+                        </div>
+    
+                <div class="col-sm-3">
+                             <h6>DESARROLLADOR</h6>
+                      <p:outputLabel for="desarrolladorJuego" />
+                        <p:inputText id="desarrolladorJuego" value="#{ingresarjuegos.desarrolladorJuego}" required="true"
+                                     requiredMessage="desarrolladorJuego requerido">
+                                <f:validateLength minimum="2"/>
+                                <p:ajax update="msgdesarrolladorJuego"  event="keyup"/>
+                        </p:inputText>
+                                <p:message for="desarrolladorJuego" id="msgdesarrolladorJuego" display="icon"/>                     
+                </div>
+                        
+                 <div class="col-sm-3">
+                        <h6>GENERO</h6>
+                        <p:outputLabel for="generoJuego" />
+                        <p:inputText  id="generoJuego" value="#{ingresarjuegos.generoJuego}" required="true"
+                                     requiredMessage="generoJuego requerido">
+                        <f:validateLength minimum="2"/>
+                        <p:ajax update="msggeneroJuego"  event="keyup"/>
+                        </p:inputText>
+                         <p:message for="generoJuego" id="msggeneroJuego" display="icon"/> 
+                  </div>
+                        
+                  <div class="col-sm-3">
+                     <h6>PRECIO</h6>
+                     <p:outputLabel for="precioJuego" />
+                     <p:inputText  id="precioJuego" value="#{ingresarjuegos.precioJuego}" required="true"
+                                     requiredMessage="precioJuego requerido">
+                        <f:validateLength minimum="2"/>
+                        <p:ajax update="msgprecioJuego"  event="keyup"/>
+                        </p:inputText>
+                         <p:message for="precioJuego" id="msgprecioJuego" display="icon"/> 
+                   </div>
+                        
+                    <div class="col-sm-3">
+                <h6>MODO JUEGO</h6>
+                <p:outputLabel for="modoJuegoJuego" />
+                <p:inputText  id="modoJuegoJuego" value="#{ingresarjuegos.modoJuegoJuego}" required="true"
+                                     requiredMessage="modoJuegoJuego requerido">
+                        <f:validateLength minimum="2"/>
+                        <p:ajax update="msgmodoJuegoJuego"  event="keyup"/>
+                        </p:inputText>
+                         <p:message for="modoJuegoJuego" id="msgmodoJuegoJuego" display="icon"/> 
+                    </div>
+    
+                    <div class="col-sm-3">
+                       <h6>FECHA LANZAMIENTO</h6>
+                       <p:outputLabel for="fechaLanzamientoJuego" />
+                       <p:inputText  id="fechaLanzamientoJuego" value="#{ingresarjuegos.fechaLanzamientoJuego}" required="true"
+                                         requiredMessage="fechaLanzamientoJuego requerido">
+                            <f:validateLength minimum="2"/>
+                            <p:ajax update="msgfechaLanzamientoJuego"  event="keyup"/>
+                            </p:inputText>
+                             <p:message for="fechaLanzamientoJuego" id="msgfechaLanzamientoJuego" display="icon"/> 
+                    </div>
+    
+                   <div class="col-sm-3">
+                      <h6>PLATAFORMA</h6>
+                        <p:outputLabel  for="plataformaJuego" />
+                        <p:inputText  id="plataformaJuego" value="#{ingresarjuegos.plataformaJuego}" required="true"
+                                     requiredMessage="plataformaJuego requerido">
+                          <f:validateLength minimum="2"/>
+                            <p:ajax update="msgplataformaJuego"  event="keyup"/>
+                        </p:inputText>
+                             <p:message for="plataformaJuego" id="msgplataformaJuego" display="icon"/> 
+                    </div>
+                        
+                    <div class="col-sm-3">
+                       <h6>IDIOMA</h6>
+                       <p:outputLabel for="idiomaJuego" />
+                       <p:inputText  id="idiomaJuego" value="#{ingresarjuegos.idiomaJuego}" required="true"
+                                         requiredMessage="idiomaJuego requerido">
+                            <f:validateLength minimum="2"/>
+                            <p:ajax update="msgidiomaJuego"  event="keyup"/>
+                            </p:inputText>
+                             <p:message for="idiomaJuego" id="msgidiomaJuego" display="icon"/> 
+                    </div>
+     
+   
+                 </div>
+                </div>
+                
+                                  <br> 
+                                       <p:commandButton styleClass="rounded-button ui-button-warning"  update="@form" value="Agregar" action="#{ingresarjuegos.agregar()}"/> 
+                                  </br>
+                
+            </h:form>
+ 
+        </ui:define>
+            
+<ui:define name="bottom">
+    
+    
+    <div class="card text-secondary">
+            <p:ajaxStatus styleClass="p-d-block p-mb-4">
+                <f:facet name="default">
+                    <h:outputText value="Status: StandBy" />
+                </f:facet>
+
+                <f:facet name="start">
+                    <i class="pi pi-spin pi-spinner loading-icon" aria-hidden="true"></i>
+                </f:facet>
+
+                <f:facet name="complete">
+                    <h:outputText value="Status: JUEGO ELIMINADO EXITOSAMENTE" />
+                </f:facet>
+            </p:ajaxStatus>
+
+             <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"/>
+
+                    <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                        <div class="p-text-center">
+                            <i class="pi pi-spin pi-spinner loading-icon" aria-hidden="true"></i>
+                        </div>
+                    </p:dialog>
+
+                                <h:form>
+                                      <br>
+                                  <p:commandButton  styleClass="rounded-button ui-button-help" value="Eliminar" action="#{ingresarjuegos.eliminar()}"/>
+                                       <p:inputText  value="#{ingresarjuegos.buscaID}"/>
+                                       </br>
+                                </h:form>
+   </div>
+    
+            <marquee >
+                   <img src="https://as01.epimg.net/meristation/imagenes/2021/02/21/reportajes/1613888485_682494_1613888565_noticia_normal.jpg" width="200" height="200" />
+                   <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/09/mejores-juegos-super-mario.jpg?itok=Y16dIZA5" width="200" height="200" />
+                   <img src="https://eep-madrid.es/blog/wp-content/uploads/2019/12/fortnite-para-android.jpg" width="200" height="200" />
+                   <img src="https://areajugones.sport.es/wp-content/uploads/2020/11/halo-master-chief-1080x609.jpg" width="200" height="200" />
+                   <img src="https://culturageek.com.ar/wp-content/uploads/2021/08/1589953288_448757_1589953463_noticia_normal_recorte1.jpg" width="200" height="200" />
+                   <img src="https://depor.com/resizer/pTX9pnI2GOu2cmYQGIpD_LbFeAY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KGPLE3GVHNBEXLLH5OY6JOF454.jpg" width="200" height="200" />
+                   <img src="https://as01.epimg.net/meristation/imagenes/2021/02/21/reportajes/1613888485_682494_1613888565_noticia_normal.jpg" width="200" height="200" />
+                   <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/09/mejores-juegos-super-mario.jpg?itok=Y16dIZA5" width="200" height="200" />
+                   <img src="https://eep-madrid.es/blog/wp-content/uploads/2019/12/fortnite-para-android.jpg" width="200" height="200" />
+                   <img src="https://areajugones.sport.es/wp-content/uploads/2020/11/halo-master-chief-1080x609.jpg" width="200" height="200" />
+                   <img src="https://culturageek.com.ar/wp-content/uploads/2021/08/1589953288_448757_1589953463_noticia_normal_recorte1.jpg" width="200" height="200" />
+                   <img src="https://depor.com/resizer/pTX9pnI2GOu2cmYQGIpD_LbFeAY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KGPLE3GVHNBEXLLH5OY6JOF454.jpg" width="200" height="200" />
+            </marquee> 
+     
+</ui:define>
+        </ui:composition>
+    </body>
+</html>

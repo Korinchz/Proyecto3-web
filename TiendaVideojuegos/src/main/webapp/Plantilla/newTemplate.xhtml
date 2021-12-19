@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/cssLayout.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/default.css" rel="stylesheet" type="text/css"/>
+        
+        <title>Facelets Template</title>
+           <style>
+      marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: #E74C3C ;
+      font-family: MV Boli;
+        animation: animado 3s linear infinite;
+       }
+       @keyframes animado{
+           0%,80%{
+               color: #28B463 ;
+               text-shadow: none;
+           }
+               100%{
+                   color: #E74C3C ;
+               text-shadow: 0 0 10px #fff,
+                            0 0 20px #fff,
+                            0 0 40px #fff,
+                            0 0 60px #fff,
+                            0 0 80px #fff,
+                            0 0 120px #fff,
+                            0 0 160px #fff;
+           }
+      
+      }
+       
+       label{
+      color: #28B463;
+    
+      }
+        h6{
+           color: #E74C3C;
+   animation: animado 2s linear infinite;
+       }
+       @keyframes animado{
+           0%,80%{
+               color: #28B463;
+               text-shadow: none;
+           }
+               100%{
+                   color: #E74C3C ;
+               text-shadow: 0 0 10px #fff,
+                            0 0 20px #fff,
+                            0 0 40px #fff,
+                            0 0 60px #fff,
+                            0 0 80px #fff,
+                            0 0 120px #fff,
+                            0 0 160px #fff;
+           }
+       }
+       
+        .loading-icon {
+       font-size: 3rem;
+       color: var(--primary-color);
+       
+       
+       
+    }
+    
+      
+    </style>       
+
+    </h:head>
+
+    <h:body>
+
+        <div id="top">
+              <marquee behavior="alternate" direction="left">INVENTARIO VIDEO JUEGOS</marquee>
+          
+            <ui:insert name="top">
+                 <div class="card">
+    <h:form>
+        <h5>Horizontal</h5>
+        <p:megaMenu orientation="horizontal" autoDisplay="false">
+            <p:submenu label="INICIO" icon="pi pi-fw pi-video">
+                <p:column>
+                    <p:submenu label="INICIO">
+                        <p:menuitem value="Principal" url="./faces/ingresar.xhtml"/>
+                       <p:menuitem value="Lista" url="./faces/verJuegos.xhtml"/>
+                    </p:submenu>
+                    
+                </p:column>
+
+               
+                 
+            </p:submenu>
+
+            <p:submenu label="BASE DE DATOS" icon="pi pi-fw pi-users">
+
+                <p:column>
+                    <p:submenu label="BASE DE DATOS">
+                        <p:menuitem value="AGREGAR Y ELIMINAR" url="./faces/IngresarJuegos1.xhtml"/>
+                         <p:menuitem value="Mostrar" url="./faces/mostrarjuegos.xhtml"/>
+                        <p:menuitem value="ACTUALIZAR" url="./faces/Actualizar.xhtml"/>
+                    </p:submenu>
+                </p:column>
+            </p:submenu>
+        </p:megaMenu>       
+           </h:form>     
+          </div>    
+                
+            </ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom">
+            <ui:insert name="bottom">Bottom</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>

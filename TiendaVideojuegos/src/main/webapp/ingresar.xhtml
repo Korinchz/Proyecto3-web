@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+    <ui:composition template="./Plantilla/plantillaresumen.xhtml">
+
+    <ui:define name="content">
+      <h:form>
+        <div class="container mt-3">
+            <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card">
+                                 <div class="card-header" >
+                                        <h2>Producto</h2>
+                                 </div>
+                                        <div class="card-body">
+                                           <marquee >
+                                          <img src="https://as01.epimg.net/meristation/imagenes/2021/02/21/reportajes/1613888485_682494_1613888565_noticia_normal.jpg" width="200" height="200" />
+                                          <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/09/mejores-juegos-super-mario.jpg?itok=Y16dIZA5" width="200" height="200" />
+                                          <img src="https://eep-madrid.es/blog/wp-content/uploads/2019/12/fortnite-para-android.jpg" width="200" height="200" />
+                                          <img src="https://areajugones.sport.es/wp-content/uploads/2020/11/halo-master-chief-1080x609.jpg" width="200" height="200" />
+                                          <img src="https://culturageek.com.ar/wp-content/uploads/2021/08/1589953288_448757_1589953463_noticia_normal_recorte1.jpg" width="200" height="200" />
+                                          <img src="https://depor.com/resizer/pTX9pnI2GOu2cmYQGIpD_LbFeAY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KGPLE3GVHNBEXLLH5OY6JOF454.jpg" width="200" height="200" />
+                                           </marquee>
+                                        </div>
+                                <div class="card-footer">
+                               <label>Producto</label>
+                                    <div>
+                                      <p:outputLabel for="nombre" />
+                                      <p:inputText id="nombre" value="#{Ingresarlista.nombre}" required="true"
+                                          requiredMessage="nombre requerido">
+                                             <f:validateLength minimum="2"/>
+                                               <p:ajax update="msgnombre"  event="keyup"/>
+                                      </p:inputText>
+                                               <p:message for="nombre" id="msgnombre" display="icon"/>    
+                                    </div>
+                                 </div>
+                            </div>  
+                        </div> 
+      
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Desarrollado</h2>
+                    </div>
+                        <div class="card-body">
+                          <marquee >
+                             <img src="https://logos-download.com/wp-content/uploads/2016/06/Nintendo_logo_red-700x172.png" width="200" height="200" />
+                             <img src="https://www.mundomarketing.com/wp-content/uploads/2020/06/article_53_1.jpg" width="200" height="200" />
+                             <img src="https://cdn.redmondpie.com/wp-content/uploads/2015/07/microsoft-logo-main.png" width="200" height="200" />
+                             <img src="https://logos-download.com/wp-content/uploads/2016/06/Nintendo_logo_red-700x172.png" width="200" height="200" />
+                             <img src="https://www.mundomarketing.com/wp-content/uploads/2020/06/article_53_1.jpg" width="200" height="200" />
+                             <img src="https://cdn.redmondpie.com/wp-content/uploads/2015/07/microsoft-logo-main.png" width="200" height="200" />
+                          </marquee>    
+                        </div>
+                    <div class="card-footer">
+                        <label>Desarrollador</label>
+                        <div>
+                          <p:outputLabel for="desarrollador" />
+                          <p:inputText id="desarrollador" value="#{Ingresarlista.desarrollador}" required="true"
+                            requiredMessage="desarrollador requerido">
+                           <f:validateLength minimum="2"/>
+                             <p:ajax update="msgdesarrollador"  event="keyup"/>
+                          </p:inputText>
+                             <p:message for="desarrollador" id="msgdesarrollador" display="icon"/>    
+                                
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+
+
+                    <div class="col-sm-3">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2>Genero</h2>
+                                        </div>
+                                        <div class="card-body">
+                                        <marquee >
+                                            <img src="https://as01.epimg.net/meristation/imagenes/2021/01/01/reportajes/1609527901_287807_1609584490_noticia_normal.jpg" width="200" height="200" />
+                                        <img src="https://as01.epimg.net/meristation/imagenes/2021/06/10/reportajes/1623309498_548388_1623309632_noticia_normal.jpg" width="200" height="200" />
+                                        <img src="https://i.blogs.es/0903d8/diseno-sin-titulo-4-/1366_2000.jpeg" width="200" height="200" />
+                                       <img src="https://as01.epimg.net/meristation/imagenes/2021/01/01/reportajes/1609527901_287807_1609584490_noticia_normal.jpg" width="200" height="200" />
+                                        <img src="https://as01.epimg.net/meristation/imagenes/2021/06/10/reportajes/1623309498_548388_1623309632_noticia_normal.jpg" width="200" height="200" />
+                                        <img src="https://i.blogs.es/0903d8/diseno-sin-titulo-4-/1366_2000.jpeg" width="200" height="200" />
+
+                                        </marquee>
+                                        </div>
+                                        <div class="card-footer">
+                                            <label>Genero</label>
+                                            <div>
+                                          <p:outputLabel for="genero" />
+                              <p:inputText id="genero" value="#{Ingresarlista.genero}" required="true"
+                                             requiredMessage="genero requerido">
+                                <f:validateLength minimum="2"/>
+                                <p:ajax update="msggenero"  event="keyup"/>
+                                </p:inputText>
+                                 <p:message for="genero" id="msggenero" display="icon"/>    
+
+                                            </div>
+                                        </div>
+                                    </div>  
+                    </div> 
+
+            
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Precio</h2>
+                            </div>
+                            <div class="card-body">
+                             <marquee >
+                                <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                           <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                            <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                           <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                             <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                           <img src="https://m.media-amazon.com/images/I/91B6qgLjJZL._SL1500_.jpg" width="200" height="200" />
+                                </marquee>
+                            </div>
+                            <div class="card-footer">
+                                <label>Precio</label>
+                                <div>
+                               <p:outputLabel for="precio" />
+                  <p:inputText id="precio" value="#{Ingresarlista.precio}" required="true"
+                                 requiredMessage="precio requerido">
+                       <f:validateLength minimum="2"/>
+                  <p:ajax update="msgprecio"  event="keyup"/> 
+                  </p:inputText>
+                     <p:message for="precio" id="msgprecio" display="icon"/>    
+
+                                </div>
+                            </div>
+                        </div>  
+                   </div> 
+     
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Modo Juego</h2>
+                        </div>
+                        <div class="card-body">
+                        <marquee >
+                            <img src="https://eloutput.com/app/uploads-eloutput.com/2019/08/Nuevos-DualShock-4.jpg" width="200" height="200" />
+                       <img src="https://p4.wallpaperbetter.com/wallpaper/386/108/23/gaming-console-4k-microsoft-xbox-one-x-wallpaper-preview.jpg" width="200" height="200" />
+                        <img src="https://assets1.ignimgs.com/2018/09/26/nintendoswitch-blogroll-1537989454357_1280w.jpg" width="200" height="200" />
+                       <img src="https://eloutput.com/app/uploads-eloutput.com/2021/11/dualsense-ps5-mascota.jpg" width="200" height="200" />
+                           </marquee>
+                        </div>
+                        <div class="card-footer">
+                            <label>Modo Juego</label>
+                            <div>
+                         <p:outputLabel for="modoJuego" />
+              <p:inputText id="modoJuego" value="#{Ingresarlista.modoJuego}" required="true"
+                             requiredMessage="modoJuego requerido">
+                <f:validateLength minimum="2"/>
+                <p:ajax update="msgmodoJuego"  event="keyup"/>
+                </p:inputText>
+                 <p:message for="modoJuego" id="msgmodoJuego" display="icon"/>    
+
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+              
+            
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Lazamiento</h2>
+                        </div>
+                        <div class="card-body">
+                         <marquee >
+                            <img src="https://www.eluniverso.com/resizer/z3DDNa0KzAnC6CBhmFN6_m-sA7g=/1677x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/KOVWKIDG7JGMDIY6DRFAX5KCMQ.jpg" width="200" height="200" />
+                       <img src="https://i.blogs.es/56a536/mejores-juegos-ps5-2021/1366_2000.jpeg" width="200" height="200" />
+                        <img src="https://as01.epimg.net/meristation/imagenes/2020/06/12/noticias/1591974750_403673_1591975820_noticia_normal.jpg" width="200" height="200" />
+                       <img src="https://as01.epimg.net/meristation/imagenes/2021/01/01/reportajes/1609527901_287807_1609584490_noticia_normal.jpg" width="200" height="200" />
+                           </marquee>
+                        </div>
+                        <div class="card-footer">
+                            <label>Fecha Lazamiento</label>
+                            <div>
+                          <p:outputLabel for="fechaLazamiento" />
+              <p:inputText id="fechaLazamiento" value="#{Ingresarlista.fechaLazamiento}" required="true"
+                             requiredMessage="fechaLazamiento requerido">
+                <f:validateLength minimum="2"/>
+                <p:ajax update="msgfechaLazamiento"  event="keyup"/>
+                </p:inputText>
+                 <p:message for="fechaLazamiento" id="msgfechaLazamiento" display="icon"/>    
+
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+
+          
+            
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Plataforma</h2>
+                        </div>
+                        <div class="card-body">
+                    <marquee >
+                            <img src="https://wallpapercave.com/wp/wp2427733.png" width="150" height="200" />
+                       <img src="https://cutewallpaper.org/21/xbox-logo-images/Xbox-Brand-Logo-HD-Wallpaper-Wallpaper-Stream.jpg" width="150" height="200" />
+                        <img src="https://p4.wallpaperbetter.com/wallpaper/295/397/128/playstation-blue-background-logo-playstation-logo-wallpaper-preview.jpg" width="150" height="200" />
+                        <img src="https://wallpapercave.com/wp/wp2427733.png" width="150" height="200" />
+                       <img src="https://cutewallpaper.org/21/xbox-logo-images/Xbox-Brand-Logo-HD-Wallpaper-Wallpaper-Stream.jpg" width="150" height="200" />
+                        <img src="https://p4.wallpaperbetter.com/wallpaper/295/397/128/playstation-blue-background-logo-playstation-logo-wallpaper-preview.jpg" width="150" height="200" />
+
+                           </marquee>
+                        </div>
+                        <div class="card-footer">
+                            <label>Descripcion Plataforma</label>
+                            <div>
+                          <p:outputLabel for="plataforma" />
+              <p:inputText id="plataforma" value="#{Ingresarlista.plataforma}" required="true"
+                             requiredMessage="palataforma requerido">
+                <f:validateLength minimum="2"/>
+                <p:ajax update="msgplataforma"  event="keyup"/>
+                </p:inputText>
+                 <p:message for="plataforma" id="msgplataforma" display="icon"/>    
+
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+            
+            
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>IDIOMA</h2>
+                    </div>
+                    <div class="card-body">
+                 <marquee >
+                   <img src="https://amazingbilbao.files.wordpress.com/2012/11/icono-ingles.jpg" width="200" height="200" />
+                    <img src="https://0201.nccdn.net/1_2/000/000/0d6/3ac/INGLES-_ICONO-318x320.CdZF2eVH9.png#RDAMDAID4691367" width="200" height="200" />
+                   <img src="https://cdn.icon-icons.com/icons2/107/PNG/512/france_18287.png" width="200" height="200" />
+                    <img src="https://cdn.icon-icons.com/icons2/107/PNG/512/mexico_18277.png" width="200" height="200" />
+                    
+                 </marquee>
+                    </div>
+                    <div class="card-footer">
+                        <label>Descripcion idioma</label>
+                        <div>
+                       <p:outputLabel for="idiomas" />
+          <p:inputText id="idiomas" value="#{Ingresarlista.idiomas}" required="true"
+                         requiredMessage="idiomas requerido">
+            <f:validateLength minimum="2"/>
+            <p:ajax update="msgidiomas"  event="keyup"/>
+            </p:inputText>
+             <p:message for="idiomas" id="msgidiomas" display="icon"/>    
+                               
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+  
+        </div> 
+     
+        </div>
+
+<br>
+<p:commandButton  value="Guargar inventario" update="@form" styleClass="rounded-button ui-button-success"  action="#{Ingresarlista.guardarInformacion()}" />  
+</br>
+
+   </h:form>
+    </ui:define>
+
+   </ui:composition>
+    </body>
+</html>
