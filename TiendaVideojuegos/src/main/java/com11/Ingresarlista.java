@@ -31,6 +31,10 @@ public class Ingresarlista extends Juegos {
         JuegosRepositorio.agregarJuegos(this);
         return "verJuegos";
     }
+    public String copiarinformacion(){
+
+        
+    }
    
     
 }
